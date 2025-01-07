@@ -1,0 +1,11 @@
+name: Echo Success Workflow
+
+on: [push]
+
+jobs:
+  echo-success:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment to run the job
+
+    steps:
+     - name: Echo success message
+        run: echo "this is successful"  # Echo the message
