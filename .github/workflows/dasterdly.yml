@@ -1,0 +1,14 @@
+name: Integrating Burp Dastardly tool
+
+on: [push]
+
+jobs:
+  burp_scan:
+    runs-on: ubuntu-latest
+    name: Scanning the app
+steps:
+  - name: Run Dastardly Action Step
+    continue-on-error: true
+    uses: PortSwigger/dastardly-github-action@main
+    with:
+      target-url: 'http://testphp.vulnweb.com'
